@@ -27,7 +27,8 @@
     "lib"
   ],
   "publishConfig": {
-    "access": "public"
+    "access": "public",
+    "@cnsdgsw:registry": "https://npm.pkg.github.com"
   },
   "repository": {
     "type": "git",
