@@ -32,6 +32,7 @@ jobs:
         run: |
           cat << EOF > "./.npmrc"
            //registry.npmjs.org/:_authToken=$NPM_REGISTRY_TOKEN
+           @dgswcns:registry=https://npm.pkg.github.com/
           EOF
         env:
           NPM_REGISTRY_TOKEN: ${{ secrets.NPM_REGISTRY_TOKEN }}
