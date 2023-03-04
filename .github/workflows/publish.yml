@@ -41,7 +41,7 @@ jobs:
         with:
           scope: '@dgswcns'
           registry: 'https://npm.pkg.github.com'
-          auth-token: ${{secrets.GH_TOKEN}}
+          auth-token: ${{secrets.NPM_REGISTRY_TOKEN}}
 
       - name: Create Release or Publish to npm
         uses: changesets/action@v1
