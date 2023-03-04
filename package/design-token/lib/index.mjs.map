@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../src/index.ts"],
+  "sourcesContent": ["export const addFunction = () => 1+2;"],
+  "mappings": "AAAO,IAAMA,EAAc,IAAM",
+  "names": ["addFunction"]
+}
