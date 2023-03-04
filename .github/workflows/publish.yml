@@ -36,6 +36,13 @@ jobs:
         env:
           NPM_REGISTRY_TOKEN: ${{ secrets.NPM_REGISTRY_TOKEN }}
 
+      - name: Create .npmrc for token authentication
+        uses: healthplace/npmrc-registry-login-action@v1.0
+        with:
+          scope: '@dgswcns'
+          registry: 'https://npm.pkg.github.com'
+          auth-token: ${{secrets.NPM_REGISTRY_TOKEN}}
+
       - name: Create Release or Publish to npm
         uses: changesets/action@v1
         with:
