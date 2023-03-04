@@ -20,6 +20,7 @@
     "build:dts": "ultra -r --build build:dts",
     "clean": "ultra -r clean",
     "dev": "ultra -r dev",
-    "ci:publish": "ultra -r ci:publish"
+    "ci:publish": "ultra -r ci:publish",
+    "version-packages": "ultra -r ci:version"
   }
 }
