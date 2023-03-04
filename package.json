@@ -1,0 +1,12 @@
+{
+  "name": "CNS-Design-System",
+  "packageManager": "yarn@3.0.2",
+  "workspaces": {
+    "packages": [
+      "package/*"
+    ]
+  },
+  "devDependencies": {
+    "typescript": "^4.9.5"
+  }
+}
