@@ -398,9 +398,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@cns/cns@workspace:.":
+"@dgswcns/cns@workspace:.":
   version: 0.0.0-use.local
-  resolution: "@cns/cns@workspace:."
+  resolution: "@dgswcns/cns@workspace:."
   dependencies:
     "@changesets/cli": ^2.26.0
     "@typescript-eslint/eslint-plugin": ^5.54.1
@@ -410,6 +410,29 @@ __metadata:
     prettier: ^2.8.4
     typescript: 4.8.4
     ultra-runner: ^3.10.5
+  languageName: unknown
+  linkType: soft
+
+"@dgswcns/design-token@workspace:^, @dgswcns/design-token@workspace:package/design-token":
+  version: 0.0.0-use.local
+  resolution: "@dgswcns/design-token@workspace:package/design-token"
+  dependencies:
+    nanobundle: ^0.0.27
+  languageName: unknown
+  linkType: soft
+
+"@dgswcns/react-styled-theme@workspace:package/react-styled-theme":
+  version: 0.0.0-use.local
+  resolution: "@dgswcns/react-styled-theme@workspace:package/react-styled-theme"
+  dependencies:
+    "@dgswcns/design-token": "workspace:^"
+    "@types/node": ^18.14.6
+    "@types/react": ^18.0.3
+    "@types/styled-components": ^5.1.26
+    nanobundle: ^0.0.27
+    react: ^18.2.0
+    react-dom: ^18.2.0
+    styled-components: ^5.3.8
   languageName: unknown
   linkType: soft
 
@@ -3438,20 +3461,6 @@ __metadata:
   checksum: f7a19ac3496de32ca9ae12aa030f00f14a3d45374f1ceca0af707c831b2a6098ef0d6bdae51bd437b0a306d7f01d4677fcc8de7c0d331eb47ad0f46130e53c5f
   languageName: node
   linkType: hard
-
-"react-styled-theme@workspace:package/react-styled-theme":
-  version: 0.0.0-use.local
-  resolution: "react-styled-theme@workspace:package/react-styled-theme"
-  dependencies:
-    "@types/node": ^18.14.6
-    "@types/react": ^18.0.3
-    "@types/styled-components": ^5.1.26
-    nanobundle: ^0.0.27
-    react: ^18.2.0
-    react-dom: ^18.2.0
-    styled-components: ^5.3.8
-  languageName: unknown
-  linkType: soft
 
 "react@npm:^18.2.0":
   version: 18.2.0

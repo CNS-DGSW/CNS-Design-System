@@ -1,5 +1,5 @@
 {
-    "name": "@cns/cns",
+    "name": "@dgswcns/cns",
     "packageManager": "yarn@3.4.1",
     "private": true,
     "workspaces": {
