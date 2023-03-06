@@ -1,0 +1,45 @@
+{
+    "name": "react-styled-theme",
+    "packageManager": "yarn@3.4.1",
+    "version": "0.0.1",
+    "license": "MIT",
+    "sideEffects": false,
+    "description": "",
+    "source": "./src/index.ts",
+    "types": "./lib/index.d.ts",
+    "devDependencies": {
+        "@types/node": "^18.14.6",
+        "@types/react": "^18.0.3",
+        "@types/styled-components": "^5.1.26",
+        "nanobundle": "^0.0.27"
+    },
+    "scripts": {
+        "build": "nanobundle build",
+        "ci:publish": "yarn npm publish",
+        "ci:version": "yarn changeset version"
+    },
+    "exports": {
+        ".": {
+            "require": "./lib/index.cjs",
+            "import": "./lib/index.mjs"
+        },
+        "./package.json": "./package.json"
+    },
+    "files": [
+        "lib"
+    ],
+    "publishConfig": {
+        "access": "public",
+        "@cnsdgsw:registry": "https://npm.pkg.github.com"
+    },
+    "repository": {
+        "type": "git",
+        "directory": "package/design-token",
+        "url": "git+https://github.com/CNS-DGSW/CNS-Design-System.git"
+    },
+    "dependencies": {
+        "react": "^18.2.0",
+        "react-dom": "^18.2.0",
+        "styled-components": "^5.3.8"
+    }
+}
