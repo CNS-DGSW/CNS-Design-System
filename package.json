@@ -1,26 +1,31 @@
 {
-  "name": "@cns/cns",
-  "private": true,
-  "packageManager": "yarn@3.2.4",
-  "workspaces": {
-    "packages": [
-      "package/*"
-    ]
-  },
-  "devDependencies": {
-    "@changesets/cli": "^2.26.0",
-    "esbuild": "^0.17.11",
-    "eslint": "^8.35.0",
-    "prettier": "^2.8.4",
-    "typescript": "^4.9.5",
-    "ultra-runner": "^3.10.5"
-  },
-  "scripts": {
-    "build": "ultra -r build",
-    "build:dts": "ultra -r --build build:dts",
-    "clean": "ultra -r clean",
-    "dev": "ultra -r dev",
-    "ci:publish": "ultra -r ci:publish",
-    "version-packages": "ultra -r ci:version"
-  }
+    "name": "@cns/cns",
+    "private": true,
+    "packageManager": "yarn@3.2.4",
+    "workspaces": {
+        "packages": [
+            "package/*"
+        ]
+    },
+    "devDependencies": {
+        "@changesets/cli": "^2.26.0",
+        "esbuild": "^0.17.11",
+        "eslint": "^8.35.0",
+        "prettier": "^2.8.4",
+        "typescript": "^4.9.5",
+        "ultra-runner": "^3.10.5"
+    },
+    "scripts": {
+        "build": "ultra -r build",
+        "build:dts": "ultra -r --build build:dts",
+        "clean": "ultra -r clean",
+        "dev": "ultra -r dev",
+        "ci:publish": "ultra -r ci:publish",
+        "version-packages": "ultra -r ci:version"
+    },
+    "dependencies": {
+        "@typescript-eslint/eslint-plugin": "latest",
+        "@typescript-eslint/parser": "latest",
+        "eslint-plugin-react": "latest"
+    }
 }
