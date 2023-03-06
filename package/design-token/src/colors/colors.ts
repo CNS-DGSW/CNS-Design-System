@@ -5,6 +5,7 @@ export const lightThemeToken: ColorType = {
     green: 'green',
     white: '#fff',
     blue: 'blue',
+    red: 'red'
 };
 
 export const darkThemeToken: ColorType = {
@@ -12,4 +13,5 @@ export const darkThemeToken: ColorType = {
     green: 'green',
     white: '#000',
     blue: 'blue',
+    red: 'red'
 };
