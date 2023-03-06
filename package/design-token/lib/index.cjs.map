@@ -1,7 +1,7 @@
 {
   "version": 3,
   "sources": ["../src/index.ts", "../src/colors/colors.ts"],
-  "sourcesContent": ["export * from './colors';\n", "import { ColorType } from './types';\n\nexport const lightThemeToken: ColorType = {\n    black: '#000',\n    green: 'green',\n    white: '#fff',\n};\n\nexport const darkThemeToken: ColorType = {\n    black: '#fff',\n    green: 'green',\n    white: '#000',\n};\n"],
-  "mappings": "yaAAA,IAAAA,EAAA,GAAAC,EAAAD,EAAA,oBAAAE,EAAA,oBAAAC,IAAA,eAAAC,EAAAJ,GCEO,IAAMK,EAA6B,CACtC,MAAO,OACP,MAAO,QACP,MAAO,MACX,EAEaC,EAA4B,CACrC,MAAO,OACP,MAAO,QACP,MAAO,MACX",
+  "sourcesContent": ["export * from './colors';\n", "import { ColorType } from './types';\n\nexport const lightThemeToken: ColorType = {\n    black: '#000',\n    green: 'green',\n    white: '#fff',\n    blue: 'blue',\n};\n\nexport const darkThemeToken: ColorType = {\n    black: '#fff',\n    green: 'green',\n    white: '#000',\n    blue: 'blue',\n};\n"],
+  "mappings": "yaAAA,IAAAA,EAAA,GAAAC,EAAAD,EAAA,oBAAAE,EAAA,oBAAAC,IAAA,eAAAC,EAAAJ,GCEO,IAAMK,EAA6B,CACtC,MAAO,OACP,MAAO,QACP,MAAO,OACP,KAAM,MACV,EAEaC,EAA4B,CACrC,MAAO,OACP,MAAO,QACP,MAAO,OACP,KAAM,MACV",
   "names": ["src_exports", "__export", "darkThemeToken", "lightThemeToken", "__toCommonJS", "lightThemeToken", "darkThemeToken"]
 }
