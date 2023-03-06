@@ -4,6 +4,7 @@
 
 ### Patch Changes
 
+changeset-release/main
 -   b6fbee8: colors testing
 
 ## 1.0.1
