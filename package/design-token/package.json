@@ -1,38 +1,37 @@
 {
-  "name": "@dgswcns/design-token",
-  "version": "1.0.1",
-  "packageManager": "yarn@3.2.4",
-  "license": "MIT",
-  "sideEffects": false,
-  "description": "",
-  "source": "./src/index.ts",
-  "types": "./lib/index.d.ts",
-  "devDependencies": {
-    "nanobundle": "^0.0.27"
-  },
-  "scripts": {
-    "build": "nanobundle build",
-    "ci:publish": "yarn npm publish",
-    "ci:version": "yarn changeset version"
-  },
-  "exports": {
-    ".": {
-      "require": "./lib/index.cjs",
-      "import": "./lib/index.mjs"
+    "name": "@dgswcns/design-token",
+    "version": "1.0.1",
+    "packageManager": "yarn@3.2.4",
+    "license": "MIT",
+    "sideEffects": false,
+    "description": "",
+    "source": "./src/index.ts",
+    "types": "./lib/index.d.ts",
+    "devDependencies": {
+        "nanobundle": "^0.0.27"
     },
-    "./package.json": "./package.json"
-  },
-  "files": [
-    "src",
-    "lib"
-  ],
-  "publishConfig": {
-    "access": "public",
-    "@cnsdgsw:registry": "https://npm.pkg.github.com"
-  },
-  "repository": {
-    "type": "git",
-    "directory": "package/design-token",
-    "url": "git+https://github.com/CNS-DGSW/CNS-Design-System.git"
-  }
+    "scripts": {
+        "build": "nanobundle build",
+        "ci:publish": "yarn npm publish",
+        "ci:version": "yarn changeset version"
+    },
+    "exports": {
+        ".": {
+            "require": "./lib/index.cjs",
+            "import": "./lib/index.mjs"
+        },
+        "./package.json": "./package.json"
+    },
+    "files": [
+        "lib"
+    ],
+    "publishConfig": {
+        "access": "public",
+        "@cnsdgsw:registry": "https://npm.pkg.github.com"
+    },
+    "repository": {
+        "type": "git",
+        "directory": "package/design-token",
+        "url": "git+https://github.com/CNS-DGSW/CNS-Design-System.git"
+    }
 }
