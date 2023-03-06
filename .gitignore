@@ -3,3 +3,5 @@
 .yarn/sdks
 
 .yarn/cache
+
+.DS_Store

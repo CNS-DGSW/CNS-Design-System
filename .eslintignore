@@ -1,0 +1,5 @@
+**/lib/**
+**/dist/**
+**/*.test.{js,jsx,ts,tsx}
+**/*.spec.{js,jsx,ts,tsx}
+**/config-overrides.js
