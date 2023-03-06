@@ -1,5 +1,5 @@
 {
-    "name": "react-styled-theme",
+    "name": "@dgswcns/react-styled-theme",
     "packageManager": "yarn@3.4.1",
     "version": "0.0.1",
     "license": "MIT",
@@ -38,6 +38,7 @@
         "url": "git+https://github.com/CNS-DGSW/CNS-Design-System.git"
     },
     "dependencies": {
+        "@dgswcns/design-token": "workspace:^",
         "react": "^18.2.0",
         "react-dom": "^18.2.0",
         "styled-components": "^5.3.8"
