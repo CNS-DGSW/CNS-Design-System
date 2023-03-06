@@ -1,1 +1,1 @@
-export const addFunction = () => 1 + 2;
+export * from './colors';

@@ -1,7 +1,7 @@
 {
   "version": 3,
-  "sources": ["../src/index.ts"],
-  "sourcesContent": ["export const addFunction = () => 1 + 2;\n"],
-  "mappings": "AAAO,IAAMA,EAAc,IAAM",
-  "names": ["addFunction"]
+  "sources": ["../src/colors/colors.ts"],
+  "sourcesContent": ["import { ColorType } from './types';\n\nexport const lightThemeToken: ColorType = {\n    black: '#000',\n    green: 'green',\n    white: '#fff',\n};\n\nexport const darkThemeToken: ColorType = {\n    black: '#fff',\n    green: 'green',\n    white: '#000',\n};\n"],
+  "mappings": "AAEO,IAAMA,EAA6B,CACtC,MAAO,OACP,MAAO,QACP,MAAO,MACX,EAEaC,EAA4B,CACrC,MAAO,OACP,MAAO,QACP,MAAO,MACX",
+  "names": ["lightThemeToken", "darkThemeToken"]
 }
