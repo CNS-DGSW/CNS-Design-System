@@ -1,7 +1,7 @@
 {
   "version": 3,
   "sources": ["../src/index.ts"],
-  "sourcesContent": ["export const addFunction = () => 1+2;"],
+  "sourcesContent": ["export const addFunction = () => 1 + 2;\n"],
   "mappings": "yaAAA,IAAAA,EAAA,GAAAC,EAAAD,EAAA,iBAAAE,IAAA,eAAAC,EAAAH,GAAO,IAAME,EAAc,IAAM",
   "names": ["src_exports", "__export", "addFunction", "__toCommonJS"]
 }
