@@ -1,54 +1,55 @@
-# name : publish
+name : publish
 
-# on:
-#   push:
-#    branches:
-#     - main
+on:
+  push:
+   branches:
+    - main
 
-# jobs:
-#   release:
-#     name: publish
-#     runs-on: ubuntu-latest
-#     steps: 
-#       - name: ✅ Checkout Repo
-#         uses: actions/checkout@v2
+jobs:
+  release:
+    name: publish
+    runs-on: ubuntu-latest
+    steps: 
+      - name: ✅ Checkout Repo
+        uses: actions/checkout@v2
 
-#       - name: ⚙️ Setting Node 16.x
-#         uses: actions/setup-node@v2
-#         with:
-#           node-version: "16.x"
+      - name: ⚙️ Setting Node 16.x
+        uses: actions/setup-node@v2
+        with:
+          node-version: "16.x"
 
-#       - name: Use cached node_modules
-#         uses: actions/cache@v3
-#         with:
-#           path: node_modules
-#           key: nodeModules-${{ hashFiles('**/yarn.lock') }}
-#           restore-keys: |
-#             nodeModules-
-#       - name: Install Dependencies
-#         run: yarn install --immutable
+      - name: Use cached node_modules
+        uses: actions/cache@v3
+        with:
+          path: node_modules
+          key: nodeModules-${{ hashFiles('**/yarn.lock') }}
+          restore-keys: |
+            nodeModules-
+      - name: Install Dependencies
+        run: yarn install --immutable
 
-#       - name: Creating .npmrc
-#         run: |
-#           cat << EOF > "./.npmrc"
-#            //registry.npmjs.org/:_authToken=$NPM_REGISTRY_TOKEN
-#            @dgswcns:registry=https://npm.pkg.github.com/
-#           EOF
-#         env:
-#           NPM_REGISTRY_TOKEN: ${{ secrets.NPM_REGISTRY_TOKEN }}
+      - name: Creating .npmrc
+        run: |
+          cat << EOF > "./.npmrc"
+           //registry.npmjs.org/:_authToken=$NPM_REGISTRY_TOKEN
+           @dgswcns:registry=https://npm.pkg.github.com/
+          EOF
+        env:
+          NPM_REGISTRY_TOKEN: ${{ secrets.NPM_REGISTRY_TOKEN }}
 
-#       - name: Create .npmrc for token authentication
-#         uses: healthplace/npmrc-registry-login-action@v1.0
-#         with:
-#           scope: '@dgswcns'
-#           registry: 'https://npm.pkg.github.com'
-#           auth-token: ${{secrets.NPM_REGISTRY_TOKEN}}
+      - name: Create .npmrc for token authentication
+        uses: healthplace/npmrc-registry-login-action@v1.0
+        with:
+          scope: '@dgswcns'
+          registry: 'https://npm.pkg.github.com'
+          auth-token: ${{secrets.NPM_REGISTRY_TOKEN}}
+        env: NPM_REGISTRY_TOKEN: ${{ secrets.NPM_REGISTRY_TOKEN }}
 
-#       - name: Create Release or Publish to npm
-#         uses: changesets/action@v1
-#         with:
-#           publish: yarn ci:publish
-#           version: yarn version-packages
-#         env:
-#           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
-#           NPM_REGISTRY_TOKEN: ${{ secrets.NPM_REGISTRY_TOKEN }}
+      - name: Create Release or Publish to npm
+        uses: changesets/action@v1
+        with:
+          publish: yarn ci:publish
+          version: yarn version-packages
+        env:
+          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+          NPM_REGISTRY_TOKEN: ${{ secrets.NPM_REGISTRY_TOKEN }}
