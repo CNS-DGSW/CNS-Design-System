@@ -21,7 +21,7 @@
         "clean": "ultra -r clean",
         "dev": "ultra -r dev",
         "ci:publish": "ultra -r ci:publish",
-        "version-packages": "ultra -r ci:version"
+        "version-packages": "yarn changeset version"
     },
     "dependencies": {
         "@typescript-eslint/eslint-plugin": "latest",
