@@ -15,7 +15,7 @@ const CNSThemeProvider = ({ theme, children }: CNSThemeProps) => {
         }),
         [],
     );
-    const themes = useMemo(() => colors[token[theme]], []);
+    const themes = useMemo(() => colors[token[theme]], [theme]);
     return <StyledThemeProvider theme={themes}>{children}</StyledThemeProvider>;
 };
 
