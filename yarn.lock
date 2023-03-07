@@ -426,8 +426,10 @@ __metadata:
   resolution: "@dgswcns/react-styled-theme@workspace:package/react-styled-theme"
   dependencies:
     "@dgswcns/design-token": "workspace:^"
+    "@dgswcns/react-theming": "workspace:^"
     "@types/node": ^18.14.6
-    "@types/react": ^18.0.3
+    "@types/react": ^18.0.28
+    "@types/react-dom": ^18.0.11
     "@types/styled-components": ^5.1.26
     nanobundle: ^0.0.27
     react: ^18.2.0
@@ -436,7 +438,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@dgswcns/react-theming@workspace:package/react-theming":
+"@dgswcns/react-theming@workspace:^, @dgswcns/react-theming@workspace:package/react-theming":
   version: 0.0.0-use.local
   resolution: "@dgswcns/react-theming@workspace:package/react-theming"
   dependencies:
@@ -688,7 +690,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/react@npm:*, @types/react@npm:^18.0.28, @types/react@npm:^18.0.3":
+"@types/react-dom@npm:^18.0.11":
+  version: 18.0.11
+  resolution: "@types/react-dom@npm:18.0.11"
+  dependencies:
+    "@types/react": "*"
+  checksum: 579691e4d5ec09688087568037c35edf8cfb1ab3e07f6c60029280733ee7b5c06d66df6fcc90786702c93ac8cb13bc7ff16c79ddfc75d082938fbaa36e1cdbf4
+  languageName: node
+  linkType: hard
+
+"@types/react@npm:*, @types/react@npm:^18.0.28":
   version: 18.0.28
   resolution: "@types/react@npm:18.0.28"
   dependencies:

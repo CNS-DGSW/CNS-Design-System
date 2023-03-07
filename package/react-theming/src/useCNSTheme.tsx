@@ -1,5 +1,9 @@
-import React from 'react';
+export type ThemeType = "LIGHT" | "DARK";
 
-const useCNSThemeing = ({ theme, setMode }) => {};
-
-export default useCNSThemeing;
+export const useCNSThemeing = (theme: ThemeType | undefined): ThemeType => {
+    if(theme===undefined){
+        const isLightOsTheme = window.matchMedia('(prefers-color-scheme: light)')
+        return isLightOsTheme ? 'LIGHT' : 'DARK';
+    }
+    return theme;
+};

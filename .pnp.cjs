@@ -516,8 +516,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [\
             ["@dgswcns/react-styled-theme", "workspace:package/react-styled-theme"],\
             ["@dgswcns/design-token", "workspace:package/design-token"],\
+            ["@dgswcns/react-theming", "workspace:package/react-theming"],\
             ["@types/node", "npm:18.14.6"],\
             ["@types/react", "npm:18.0.28"],\
+            ["@types/react-dom", "npm:18.0.11"],\
             ["@types/styled-components", "npm:5.1.26"],\
             ["nanobundle", "virtual:58fb73b4dedc2fc2e98038a21dfad93fdad01b8c3291588c23fc3681aeb145aa47e12e452be0c5d1fb2373b4c6e969dda76f6434ccfce1d30ff7ebd8a8d861da#npm:0.0.27"],\
             ["react", "npm:18.2.0"],\
@@ -832,6 +834,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/prop-types", "npm:15.7.5"],\
             ["@types/scheduler", "npm:0.16.2"],\
             ["csstype", "npm:3.1.1"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["@types/react-dom", [\
+        ["npm:18.0.11", {\
+          "packageLocation": "./.yarn/cache/@types-react-dom-npm-18.0.11-27f8db2995-579691e4d5.zip/node_modules/@types/react-dom/",\
+          "packageDependencies": [\
+            ["@types/react-dom", "npm:18.0.11"],\
+            ["@types/react", "npm:18.0.28"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -4620,7 +4632,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@emotion/stylis", "npm:0.8.5"],\
             ["@emotion/unitless", "npm:0.7.5"],\
             ["@types/react", "npm:18.0.28"],\
-            ["@types/react-dom", null],\
+            ["@types/react-dom", "npm:18.0.11"],\
             ["@types/react-is", null],\
             ["babel-plugin-styled-components", "virtual:48d5e912dfdc656ba35fd58d877236f8c258ed777bfc7b454b8f1c246622130cda614a9a698df4451565b338b5b08684a7f3df09598f06633d18876a8b6b885b#npm:2.0.7"],\
             ["css-to-react-native", "npm:3.2.0"],\
