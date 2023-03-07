@@ -22,6 +22,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
       {\
         "name": "@dgswcns/react-styled-theme",\
         "reference": "workspace:package/react-styled-theme"\
+      },\
+      {\
+        "name": "@dgswcns/react-theming",\
+        "reference": "workspace:package/react-theming"\
       }\
     ],\
     "enableTopLevelFallback": true,\
@@ -29,7 +33,8 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
     "fallbackExclusionList": [\
       ["@dgswcns/cns", ["workspace:."]],\
       ["@dgswcns/design-token", ["workspace:package/design-token"]],\
-      ["@dgswcns/react-styled-theme", ["workspace:package/react-styled-theme"]]\
+      ["@dgswcns/react-styled-theme", ["workspace:package/react-styled-theme"]],\
+      ["@dgswcns/react-theming", ["workspace:package/react-theming"]]\
     ],\
     "fallbackPool": [\
     ],\
@@ -518,6 +523,18 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["react", "npm:18.2.0"],\
             ["react-dom", "virtual:5c6699a75e30f6c6f77a45e7dcbbfae6ac4072ce4836d8c23649a3b39676e093cb8aa38b3a4274d6957ea0eb959d4d9e2c000cedb0ca9e6b85320d390ad3cfaf#npm:18.2.0"],\
             ["styled-components", "virtual:5c6699a75e30f6c6f77a45e7dcbbfae6ac4072ce4836d8c23649a3b39676e093cb8aa38b3a4274d6957ea0eb959d4d9e2c000cedb0ca9e6b85320d390ad3cfaf#npm:5.3.8"]\
+          ],\
+          "linkType": "SOFT"\
+        }]\
+      ]],\
+      ["@dgswcns/react-theming", [\
+        ["workspace:package/react-theming", {\
+          "packageLocation": "./package/react-theming/",\
+          "packageDependencies": [\
+            ["@dgswcns/react-theming", "workspace:package/react-theming"],\
+            ["@types/react", "npm:18.0.28"],\
+            ["nanobundle", "virtual:58fb73b4dedc2fc2e98038a21dfad93fdad01b8c3291588c23fc3681aeb145aa47e12e452be0c5d1fb2373b4c6e969dda76f6434ccfce1d30ff7ebd8a8d861da#npm:0.0.27"],\
+            ["react", "npm:18.2.0"]\
           ],\
           "linkType": "SOFT"\
         }]\

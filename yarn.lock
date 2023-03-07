@@ -436,6 +436,16 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@dgswcns/react-theming@workspace:package/react-theming":
+  version: 0.0.0-use.local
+  resolution: "@dgswcns/react-theming@workspace:package/react-theming"
+  dependencies:
+    "@types/react": ^18.0.28
+    nanobundle: ^0.0.27
+    react: ^18.2.0
+  languageName: unknown
+  linkType: soft
+
 "@emotion/is-prop-valid@npm:^1.1.0":
   version: 1.2.0
   resolution: "@emotion/is-prop-valid@npm:1.2.0"
@@ -678,7 +688,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/react@npm:*, @types/react@npm:^18.0.3":
+"@types/react@npm:*, @types/react@npm:^18.0.28, @types/react@npm:^18.0.3":
   version: 18.0.28
   resolution: "@types/react@npm:18.0.28"
   dependencies:
