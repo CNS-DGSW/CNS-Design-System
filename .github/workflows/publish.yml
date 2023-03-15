@@ -1,10 +1,10 @@
 name: Publish
-​
+
 on:
   push:
     branches:
       - main
-​
+
 jobs:
   release:
     name: Publish
@@ -13,19 +13,17 @@ jobs:
       # 레포지토리에 체크아웃하여 소스 가져옴
       - name: ✅ Checkout Repo
         uses: actions/checkout@v2
-        with:
-          fetch-depth: 0
-​
+
       # Node.js를 설치
       - name: ⚙️ Setting Node 16.x
         uses: actions/setup-node@v2
         with:
           node-version: "16.x"
-​
+
       # 빌드 및 테스트를 위해서 의존성을 설치
       - name: Install dependencies
         run: yarn install --immutable --immutable-cache --check-cache
-​
+
       # 배포를 위해 .npmrc 파일을 생성하고 인증 토큰을 추가한다.
       - name: Configure npm
         run: |
