@@ -1,0 +1,61 @@
+name: Publish
+​
+on:
+  push:
+    branches:
+      - main
+​
+jobs:
+  release:
+    name: Publish
+    runs-on: ubuntu-latest
+    steps:
+      # 레포지토리에 체크아웃하여 소스 가져옴
+      - name: ✅ Checkout Repo
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+​
+      # Node.js를 설치
+      - name: ⚙️ Setting Node 16.x
+        uses: actions/setup-node@v2
+        with:
+          node-version: "16.x"
+​
+      # 빌드 및 테스트를 위해서 의존성을 설치
+      - name: Install dependencies
+        run: yarn install --immutable --immutable-cache --check-cache
+​
+      # 배포를 위해 .npmrc 파일을 생성하고 인증 토큰을 추가한다.
+      - name: Configure npm
+        run: |
+          cat << EOF > "$HOME/.npmrc"
+            //registry.npmjs.org/:$NPM_REGISTRY_TOKEN
+          EOF
+        env:
+          NPM_REGISTRY_TOKEN: ${{ secrets.NPM_REGISTRY_TOKEN }}
+​
+      # # 패키지를 빌드한다.
+      # - name: Build packages
+      #   run: yarn build
+​
+      # Changesets에서 제공하는 Action을 사용할 수 있다. NPM에 배포, Git 태그 생성 등의 작업을 수행한다.
+      - name: Create release Pull Request or publish to NPM
+        id: changesets
+        uses: changesets/action@v1
+        with:
+          publish: changeset publish
+          commit: "ci(changesets): version packages"
+        env:
+          NPM_REGISTRY_TOKEN: ${{ secrets.NPM_REGISTRY_TOKEN }}
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
+​
+#       # 배포에 실패한 경우 후속 처리
+#       - name: Publishing fail
+#         if: steps.changesets.outputs.published != 'true'
+#         run: ...
+# ​
+#       # 배포가 성공한 경우 후속 처리
+#       - name: Publishing success!
+#         if: steps.changesets.outputs.published == 'true'
+#         run: ... # 메일, 슬랙 메시지 전송 등... 필요 기능 추가 
