@@ -22,7 +22,7 @@ jobs:
 
       # 빌드 및 테스트를 위해서 의존성을 설치
       - name: Install dependencies
-        run: yarn install
+        run: yarn install --immutable
 
       # 배포를 위해 .npmrc 파일을 생성하고 인증 토큰을 추가한다.
       - name: Configure npm
