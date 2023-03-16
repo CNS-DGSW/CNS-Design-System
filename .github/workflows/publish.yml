@@ -8,8 +8,6 @@ on:
     branches:
       - main
 
-concurrency: ${{ github.workflow }}-${{ github.ref }}
-
 jobs:
   release:
     name: Publish
@@ -32,7 +30,7 @@ jobs:
           key: nodeModules-${{ hashFiles('**/yarn.lock') }}
           restore-keys: |
             nodeModules-
-
+            
       - name: Install Dependencies
         run: yarn install --immutable
 
@@ -59,7 +57,7 @@ jobs:
           commit: "ci(changesets): version packages"
         env:
           NPM_REGISTRY_TOKEN: ${{ secrets.NPM_REGISTRY_TOKEN }}
-          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
 
 #       # 배포에 실패한 경우 후속 처리
 #       - name: Publishing fail
