@@ -413,7 +413,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@dgswcns/design-token@workspace:^, @dgswcns/design-token@workspace:package/design-token":
+"@dgswcns/design-token@^1.0.3, @dgswcns/design-token@workspace:package/design-token":
   version: 0.0.0-use.local
   resolution: "@dgswcns/design-token@workspace:package/design-token"
   dependencies:
@@ -425,8 +425,8 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@dgswcns/react-styled-theme@workspace:package/react-styled-theme"
   dependencies:
-    "@dgswcns/design-token": "workspace:^"
-    "@dgswcns/react-theming": "workspace:^"
+    "@dgswcns/design-token": ^1.0.3
+    "@dgswcns/react-theming": ^0.0.3
     "@types/node": ^18.14.6
     "@types/react": ^18.0.28
     "@types/react-dom": ^18.0.11
@@ -438,7 +438,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@dgswcns/react-theming@workspace:^, @dgswcns/react-theming@workspace:package/react-theming":
+"@dgswcns/react-theming@^0.0.3, @dgswcns/react-theming@workspace:package/react-theming":
   version: 0.0.0-use.local
   resolution: "@dgswcns/react-theming@workspace:package/react-theming"
   dependencies:
