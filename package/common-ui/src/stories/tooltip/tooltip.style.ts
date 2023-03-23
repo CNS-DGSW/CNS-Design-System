@@ -26,7 +26,7 @@ const getDirection: Record<DirectionType, FlattenSimpleInterpolation> = {
     bottom: css`
         top: 100%;
         left: 50%;
-        transform: translate(-50%, 50%);
+        transform: translate(-50%, 70%);
     `,
     left: css`
         top: 50%;
@@ -41,6 +41,6 @@ const getDirection: Record<DirectionType, FlattenSimpleInterpolation> = {
     top: css`
         bottom: 100%;
         left: 50%;
-        transform: translate(-50%, -50%);
+        transform: translate(-50%, -70%);
     `,
 };
