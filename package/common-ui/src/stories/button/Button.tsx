@@ -21,7 +21,8 @@ export const Button = ({
             border={border}
             onClick={disable ? clickEvent : () => {}}
             radius={radius}
-            shadow={shadow}>
+            shadow={shadow}
+            disable={disable}>
             {children}
         </ButtonStyle>
     );

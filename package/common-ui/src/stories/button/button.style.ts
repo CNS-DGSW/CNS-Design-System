@@ -7,7 +7,7 @@ import styled, {
 import { ButtonColorType } from '../../@types/color.type';
 import { SizeType } from '../../@types/size.type';
 import { ButtonProps } from './button.type';
-import { ColorType } from '@dgswcns/design-token';
+import { ColorKindsType } from '@dgswcns/design-token';
 
 export const ButtonStyle = styled.button<ButtonProps>`
     ${({ size }) => getSize[size!!]}
@@ -20,6 +20,7 @@ export const ButtonStyle = styled.button<ButtonProps>`
     &:hover {
         ${({ hover }) => hover && `background: ${hover}`}
     }
+    cursor: ${({ disable }) => (disable === true ? 'not-allowed' : 'pointer')};
 `;
 
 const getSize: Record<SizeType, FlattenSimpleInterpolation> = {
@@ -37,13 +38,13 @@ const getSize: Record<SizeType, FlattenSimpleInterpolation> = {
     `,
 };
 
-const getColor: Record<ButtonColorType, FlattenInterpolation<ThemeProps<ColorType>>> = {
+const getColor: Record<ButtonColorType, FlattenInterpolation<ThemeProps<ColorKindsType>>> = {
     primary: css`
-        background-color: ${({ theme }: ThemeProps<ColorType>) => theme.blue};
-        color: ${({ theme }: ThemeProps<ColorType>) => theme.white};
+        background-color: ${({ theme }: ThemeProps<ColorKindsType>) => theme.blue400};
+        color: ${({ theme }: ThemeProps<ColorKindsType>) => theme.white};
     `,
     second: css`
-        background-color: ${({ theme }: ThemeProps<ColorType>) => theme.white};
-        color: ${({ theme }: ThemeProps<ColorType>) => theme.blue};
+        background-color: ${({ theme }: ThemeProps<ColorKindsType>) => theme.white};
+        color: ${({ theme }: ThemeProps<ColorKindsType>) => theme.blue400};
     `,
 };
