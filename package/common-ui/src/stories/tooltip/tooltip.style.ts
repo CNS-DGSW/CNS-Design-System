@@ -1,4 +1,4 @@
-import { ColorKindsType } from '@dgswcns/design-token';
+import { ThemeType } from '@dgswcns/design-token';
 import styled, { css, FlattenSimpleInterpolation, ThemeProps } from 'styled-components';
 import { DirectionType } from './tooltip.type';
 
@@ -16,10 +16,10 @@ export const TooltipContainer = styled.span`
 export const TooltipTitle = styled.span<{ direction: DirectionType }>`
     position: absolute;
     padding: 5px;
-    background-color: ${({ theme }: ThemeProps<ColorKindsType>) => theme.gray600};
+    background-color: ${({ theme: { colors } }: ThemeProps<ThemeType>) => colors.gray600};
     border-radius: 8px;
     font-size: 10px;
-    color: ${({ theme }: ThemeProps<ColorKindsType>) => theme.white};
+    color: ${({ theme: { colors } }: ThemeProps<ThemeType>) => colors.white};
     ${({ direction }) => getDirection[direction]};
 `;
 const getDirection: Record<DirectionType, FlattenSimpleInterpolation> = {
