@@ -7,7 +7,7 @@ export const color = {
     lightThemeToken,
 };
 
-export type ThmeType = {
+export type ThemeType = {
     colors: ColorKindsType;
     fonts: {};
 };

@@ -4,7 +4,7 @@ export declare const color: {
     darkThemeToken: ColorKindsType;
     lightThemeToken: ColorKindsType;
 };
-export declare type ThmeType = {
+export declare type ThemeType = {
     colors: ColorKindsType;
     fonts: {};
 };
