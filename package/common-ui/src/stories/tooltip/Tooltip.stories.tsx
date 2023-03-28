@@ -3,7 +3,6 @@ import { ComponentStory, ComponentMeta } from '@storybook/react';
 
 import { Tooltip } from './Tooltip';
 import { CNSThemeProvider } from '@dgswcns/react-styled-theme';
-import { Button } from '../button/Button';
 
 export default {
     title: 'Tooltip',
@@ -20,6 +19,6 @@ const Template: ComponentStory<typeof Tooltip> = (args) => (
 export const Primary = Template.bind({});
 Primary.args = {
     title: 'tooltip',
-    children: <Button size="sm">button</Button>,
+    children: 'button',
     direction: 'bottom',
 };
