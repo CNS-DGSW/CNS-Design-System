@@ -7,7 +7,7 @@ export const lightThemeToken: ColorKindsType = Object.freeze({
 
     blue100: '#F8FAFD',
     blue200: '',
-    blue300: '',
+    blue300: '#8EC9FF',
     blue400: '#1485EE',
     blue500: '',
     blue600: '',
