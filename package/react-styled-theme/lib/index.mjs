@@ -1,0 +1,1 @@
+import T,{useMemo as o}from"react";import{ThemeProvider as h}from"styled-components";import*as i from"@dgswcns/design-token";import{useCNSThemeing as n}from"@dgswcns/react-theming";var k=({theme:e,children:r})=>{let m=o(()=>({LIGHT:"lightThemeToken",DARK:"darkThemeToken"}),[]),t=o(()=>i[m[n(e)]],[e]);return T.createElement(h,{theme:t},r)};export{k as CNSThemeProvider};

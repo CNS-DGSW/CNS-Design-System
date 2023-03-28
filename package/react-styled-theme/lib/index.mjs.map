@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../src/CNSThemeProvider.tsx"],
+  "sourcesContent": ["import React, { PropsWithChildren, useMemo } from 'react';\r\nimport { ThemeProvider as StyledThemeProvider } from 'styled-components';\r\nimport * as colors from '@dgswcns/design-token';\r\nimport { useCNSThemeing } from \"@dgswcns/react-theming\"\r\n\r\ntype ThemeTypeObject = { LIGHT: 'lightThemeToken'; DARK: 'darkThemeToken' };\r\ntype ThemeKinds = keyof ThemeTypeObject | undefined;\r\n\r\ntype CNSThemeProps = PropsWithChildren<{ theme: ThemeKinds }>;\r\n\r\nexport const CNSThemeProvider = ({ theme, children }: CNSThemeProps) => {\r\n    const token: ThemeTypeObject = useMemo(\r\n        () => ({\r\n            LIGHT: 'lightThemeToken',\r\n            DARK: 'darkThemeToken',\r\n        }),\r\n        [],\r\n    );\r\n    const themes = useMemo(() => colors[token[useCNSThemeing(theme)]], [theme]);\r\n    return <StyledThemeProvider theme={themes}>{children}</StyledThemeProvider>;\r\n};"],
+  "mappings": "AAAA,OAAOA,GAA4B,WAAAC,MAAe,QAClD,OAAS,iBAAiBC,MAA2B,oBACrD,UAAYC,MAAY,wBACxB,OAAS,kBAAAC,MAAsB,yBAOxB,IAAMC,EAAmB,CAAC,CAAE,MAAAC,EAAO,SAAAC,CAAS,IAAqB,CACpE,IAAMC,EAAyBP,EAC3B,KAAO,CACH,MAAO,kBACP,KAAM,gBACV,GACA,CAAC,CACL,EACMQ,EAASR,EAAQ,IAAME,EAAOK,EAAMJ,EAAeE,CAAK,IAAK,CAACA,CAAK,CAAC,EAC1E,OAAON,EAAA,cAACE,EAAA,CAAoB,MAAOO,GAASF,CAAS,CACzD",
+  "names": ["React", "useMemo", "StyledThemeProvider", "colors", "useCNSThemeing", "CNSThemeProvider", "theme", "children", "token", "themes"]
+}
