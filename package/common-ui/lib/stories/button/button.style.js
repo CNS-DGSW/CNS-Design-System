@@ -9,6 +9,7 @@ export const ButtonStyle = styled.button `
     &:hover {
         ${({ hover }) => hover && `background: ${hover}`}
     }
+    cursor: ${({ disable }) => (disable === true ? 'not-allowed' : 'pointer')};
 `;
 const getSize = {
     sm: css `
@@ -26,11 +27,11 @@ const getSize = {
 };
 const getColor = {
     primary: css `
-        background-color: ${({ theme }) => theme.blue};
+        background-color: ${({ theme }) => theme.blue400};
         color: ${({ theme }) => theme.white};
     `,
     second: css `
         background-color: ${({ theme }) => theme.white};
-        color: ${({ theme }) => theme.blue};
+        color: ${({ theme }) => theme.blue400};
     `,
 };

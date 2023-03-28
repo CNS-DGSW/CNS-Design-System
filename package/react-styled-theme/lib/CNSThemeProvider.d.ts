@@ -1,10 +1,10 @@
 import { PropsWithChildren } from 'react';
-type ThemeTypeObject = {
+declare type ThemeTypeObject = {
     LIGHT: 'lightThemeToken';
     DARK: 'darkThemeToken';
 };
-type ThemeKinds = keyof ThemeTypeObject | undefined;
-type CNSThemeProps = PropsWithChildren<{
+declare type ThemeKinds = keyof ThemeTypeObject | undefined;
+declare type CNSThemeProps = PropsWithChildren<{
     theme: ThemeKinds;
 }>;
 export declare const CNSThemeProvider: ({ theme, children }: CNSThemeProps) => JSX.Element;
