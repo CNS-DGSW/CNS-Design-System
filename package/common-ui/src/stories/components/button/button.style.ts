@@ -7,7 +7,7 @@ import styled, {
 import { ButtonColorType } from '../../../@types/color.type';
 import { SizeType } from '../../../@types/size.type';
 import { ButtonProps } from './button.type';
-import { ColorKindsType } from '@dgswcns/design-token';
+import { ThemeType } from '@dgswcns/design-token';
 
 export const ButtonStyle = styled.button<ButtonProps>`
     ${({ size }) => size && getSize[size]}
@@ -38,14 +38,14 @@ const getSize: Record<SizeType, FlattenSimpleInterpolation> = {
     `,
 };
 
-const getColor: Record<ButtonColorType, FlattenInterpolation<ThemeProps<ColorKindsType>>> = {
+const getColor: Record<ButtonColorType, FlattenInterpolation<ThemeProps<ThemeType>>> = {
     primary: css`
-        background-color: ${({ theme }: ThemeProps<ColorKindsType>) => theme.blue400};
-        color: ${({ theme }: ThemeProps<ColorKindsType>) => theme.white};
+        background-color: ${({ theme: { colors } }: ThemeProps<ThemeType>) => colors.blue400};
+        color: ${({ theme: { colors } }: ThemeProps<ThemeType>) => colors.white};
     `,
     second: css`
-        background-color: ${({ theme }: ThemeProps<ColorKindsType>) => theme.white};
-        color: ${({ theme }: ThemeProps<ColorKindsType>) => theme.blue400};
+        background-color: ${({ theme: { colors } }: ThemeProps<ThemeType>) => colors.white};
+        color: ${({ theme: { colors } }: ThemeProps<ThemeType>) => colors.blue400};
     `,
     third: css`
         background-color: ${({ theme }: ThemeProps<ColorKindsType>) => theme.white};
