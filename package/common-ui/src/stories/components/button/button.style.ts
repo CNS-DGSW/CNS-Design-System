@@ -10,9 +10,9 @@ import { ButtonProps } from './button.type';
 import { ColorKindsType } from '@dgswcns/design-token';
 
 export const ButtonStyle = styled.button<ButtonProps>`
-    ${({ size }) => getSize[size!!]}
-    ${({ color }) => getColor[color!!]};
-    border: ${({ border }) => (border ? `${border}` : 'none')};
+    ${({ size }) => size && getSize[size]}
+    ${({ color }) => color && getColor[color]};
+    border: ${({ border, theme }) => (border ? `${border}px solid ${theme.blue400}` : 'none')};
     border-radius: ${({ radius }) => (radius ? `${radius}px` : '0px')};
     box-shadow: ${({ shadow }) =>
         shadow && '0px 4px 30px rgba(0, 0, 0, 0.25); border-radius: 30px;'};
@@ -46,5 +46,11 @@ const getColor: Record<ButtonColorType, FlattenInterpolation<ThemeProps<ColorKin
     second: css`
         background-color: ${({ theme }: ThemeProps<ColorKindsType>) => theme.white};
         color: ${({ theme }: ThemeProps<ColorKindsType>) => theme.blue400};
+    `,
+    third: css`
+        background-color: ${({ theme }: ThemeProps<ColorKindsType>) => theme.white};
+        color: ${({ theme }: ThemeProps<ColorKindsType>) => theme.gray400};
+        border: ${({ theme }: ThemeProps<ColorKindsType>) =>
+            `1px solid ${theme.gray400} !important`};
     `,
 };

@@ -19,7 +19,7 @@ export const Button = ({
             color={color}
             hover={hover}
             border={border}
-            onClick={disable ? clickEvent : () => {}}
+            onClick={disable ? clickEvent : undefined}
             radius={radius}
             shadow={shadow}
             disable={disable}>

@@ -1,1 +1,1 @@
-export type ButtonColorType = 'primary' | 'second';
+export type ButtonColorType = 'primary' | 'second' | 'third';

@@ -8,7 +8,7 @@ export default {
     component: Button,
     argTypes: {
         color: {
-            options: ['primary', 'second'],
+            options: ['primary', 'second', 'third'],
             control: { type: 'radio' },
         },
         size: {
