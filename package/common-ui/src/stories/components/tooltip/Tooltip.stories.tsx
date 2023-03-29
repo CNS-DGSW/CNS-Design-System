@@ -5,7 +5,7 @@ import { Tooltip } from './Tooltip';
 import { CNSThemeProvider } from '@dgswcns/react-styled-theme';
 
 export default {
-    title: 'Tooltip',
+    title: 'components/Tooltip',
     component: Tooltip,
     argTypes: {},
 } as ComponentMeta<typeof Tooltip>;
