@@ -12,3 +12,5 @@ export type ThemeType = {
     colors: ColorKindsType;
     fonts: {};
 };
+
+export * from './fonts/types';
