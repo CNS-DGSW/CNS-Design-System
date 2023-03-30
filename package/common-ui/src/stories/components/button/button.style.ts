@@ -25,6 +25,11 @@ export const ButtonStyle = styled.button<ButtonProps>`
 `;
 
 const getSize: Record<SizeType, FlattenSimpleInterpolation> = {
+    xs: css`
+        width: 32px;
+        height: 32px;
+        font-size: 14px;
+    `,
     sm: css`
         width: 78px;
         height: 48px;
