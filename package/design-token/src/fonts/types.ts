@@ -1,3 +1,5 @@
+import { FlattenSimpleInterpolation } from 'styled-components';
+
 type FontType =
     | 'h1'
     | 'h2'
@@ -15,4 +17,6 @@ type FontType =
 
 type FontWeightType = 'extrabold' | 'bold' | 'semibold' | 'medium';
 
-export type FontThemeType = Readonly<Record<FontType, string> & Record<FontWeightType, number>>;
+export type FontThemeType = Readonly<
+    Record<FontType, FlattenSimpleInterpolation> & Record<FontWeightType, number>
+>;
