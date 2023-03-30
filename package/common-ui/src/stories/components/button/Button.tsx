@@ -1,7 +1,6 @@
 import React from 'react';
 import { ButtonStyle } from './button.style';
 import { ButtonProps } from './button.type';
-
 export const Button = ({
     size = 'md',
     color = 'primary',
@@ -19,7 +18,7 @@ export const Button = ({
             color={color}
             hover={hover}
             border={border}
-            onClick={disable ? clickEvent : () => {}}
+            onClick={disable ? undefined : clickEvent}
             radius={radius}
             shadow={shadow}
             disable={disable}>

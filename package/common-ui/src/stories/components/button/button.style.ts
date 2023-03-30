@@ -10,9 +10,10 @@ import { ButtonProps } from './button.type';
 import { ThemeType } from '@dgswcns/design-token';
 
 export const ButtonStyle = styled.button<ButtonProps>`
-    ${({ size }) => getSize[size!!]}
-    ${({ color }) => getColor[color!!]};
-    border: ${({ border }) => (border ? `${border}` : 'none')};
+    ${({ size }) => size && getSize[size]}
+    ${({ color }) => color && getColor[color]};
+    border: ${({ border, theme: { colors } }) =>
+        border ? `${border}px solid ${colors.blue400}` : 'none'};
     border-radius: ${({ radius }) => (radius ? `${radius}px` : '0px')};
     box-shadow: ${({ shadow }) =>
         shadow && '0px 4px 30px rgba(0, 0, 0, 0.25); border-radius: 30px;'};
@@ -24,6 +25,11 @@ export const ButtonStyle = styled.button<ButtonProps>`
 `;
 
 const getSize: Record<SizeType, FlattenSimpleInterpolation> = {
+    xs: css`
+        width: 32px;
+        height: 32px;
+        font-size: 14px;
+    `,
     sm: css`
         width: 78px;
         height: 48px;
@@ -46,5 +52,11 @@ const getColor: Record<ButtonColorType, FlattenInterpolation<ThemeProps<ThemeTyp
     second: css`
         background-color: ${({ theme: { colors } }: ThemeProps<ThemeType>) => colors.white};
         color: ${({ theme: { colors } }: ThemeProps<ThemeType>) => colors.blue400};
+    `,
+    third: css`
+        background-color: ${({ theme: { colors } }: ThemeProps<ThemeType>) => colors.white};
+        color: ${({ theme: { colors } }: ThemeProps<ThemeType>) => colors.gray400};
+        border: ${({ theme: { colors } }: ThemeProps<ThemeType>) =>
+            `1px solid ${colors.gray400} !important`};
     `,
 };

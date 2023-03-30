@@ -8,11 +8,11 @@ export default {
     component: Button,
     argTypes: {
         color: {
-            options: ['primary', 'second'],
+            options: ['primary', 'second', 'third'],
             control: { type: 'radio' },
         },
         size: {
-            options: ['sm', 'md', 'lg'],
+            options: ['xs', 'sm', 'md', 'lg'],
             control: { type: 'radio' },
         },
         children: {
