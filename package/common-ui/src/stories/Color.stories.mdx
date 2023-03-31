@@ -1,0 +1,42 @@
+import { Meta, ColorPalette, ColorItem } from '@storybook/addon-docs';
+import { color } from '@dgswcns/design-token';
+
+<Meta title="DESIGN TOKEN/Colors" />
+
+# Colors
+
+<br />
+
+### Light Theme
+
+#### PrimaryColor
+
+<ColorPallete>
+    <ColorItem title="black" subtitle="Black" colors={{ black: color.lightThemeToken.black }} />
+    <ColorItem title="white" subtitle="White" colors={{ white: color.lightThemeToken.white }} />
+    <ColorItem
+        title="blue"
+        subtitle="Blue"
+        colors={{
+            100: color.lightThemeToken.blue100,
+            300: color.lightThemeToken.blue300,
+            400: color.lightThemeToken.blue400,
+            900: color.lightThemeToken.blue900,
+        }}
+    />
+    <ColorItem
+        title="gray"
+        subtitle="Gray"
+        colors={{
+            100: color.lightThemeToken.gray100,
+            200: color.lightThemeToken.gray200,
+            300: color.lightThemeToken.gray300,
+            400: color.lightThemeToken.gray400,
+            500: color.lightThemeToken.gray500,
+            600: color.lightThemeToken.gray600,
+            700: color.lightThemeToken.gray700,
+            800: color.lightThemeToken.gray800,
+            900: color.lightThemeToken.gray900,
+        }}
+    />
+</ColorPallete>
