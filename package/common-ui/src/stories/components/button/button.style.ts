@@ -4,9 +4,8 @@ import styled, {
     FlattenSimpleInterpolation,
     ThemeProps,
 } from 'styled-components';
-import { ButtonColorType } from '../../../@types/color.type';
 import { SizeType } from '../../../@types/size.type';
-import { ButtonProps } from './button.type';
+import { ButtonColorType, ButtonProps } from './button.type';
 import { ThemeType } from '@dgswcns/design-token';
 
 export const ButtonStyle = styled.button<ButtonProps>`
@@ -45,15 +44,15 @@ const getSize: Record<SizeType, FlattenSimpleInterpolation> = {
 };
 
 const getColor: Record<ButtonColorType, FlattenInterpolation<ThemeProps<ThemeType>>> = {
-    primary: css`
+    blue400: css`
         background-color: ${({ theme: { colors } }: ThemeProps<ThemeType>) => colors.blue400};
         color: ${({ theme: { colors } }: ThemeProps<ThemeType>) => colors.white};
     `,
-    second: css`
+    white: css`
         background-color: ${({ theme: { colors } }: ThemeProps<ThemeType>) => colors.white};
         color: ${({ theme: { colors } }: ThemeProps<ThemeType>) => colors.blue400};
     `,
-    third: css`
+    gray400: css`
         background-color: ${({ theme: { colors } }: ThemeProps<ThemeType>) => colors.white};
         color: ${({ theme: { colors } }: ThemeProps<ThemeType>) => colors.gray400};
         border: ${({ theme: { colors } }: ThemeProps<ThemeType>) =>
