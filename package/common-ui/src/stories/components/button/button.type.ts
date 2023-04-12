@@ -1,5 +1,4 @@
 import { PropsWithChildren } from 'react';
-import { ButtonColorType } from '../../../@types/color.type';
 import { SizeType } from '../../../@types/size.type';
 
 export type ButtonProps = PropsWithChildren<{
@@ -12,3 +11,5 @@ export type ButtonProps = PropsWithChildren<{
     disable?: boolean;
     shadow?: boolean;
 }>;
+
+export type ButtonColorType = 'blue400' | 'gray400' | 'white';
