@@ -8,6 +8,7 @@
     "source": "./src/index.ts",
     "types": "./lib/index.d.ts",
     "devDependencies": {
+        "@types/styled-components": "^5.1.26",
         "nanobundle": "^0.0.27"
     },
     "scripts": {
@@ -33,5 +34,8 @@
         "type": "git",
         "directory": "package/design-token",
         "url": "git+https://github.com/CNS-DGSW/CNS-Design-System.git"
+    },
+    "dependencies": {
+        "styled-components": "5.3.8"
     }
 }
