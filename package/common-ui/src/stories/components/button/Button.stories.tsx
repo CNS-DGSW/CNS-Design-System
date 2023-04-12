@@ -8,7 +8,7 @@ export default {
     component: Button,
     argTypes: {
         color: {
-            options: ['primary', 'second', 'third'],
+            options: ['blue400', 'white', 'gray400'],
             control: { type: 'radio' },
         },
         size: {
@@ -51,27 +51,27 @@ const Template: ComponentStory<typeof Button> = (args) => (
 export const Primary = Template.bind({});
 Primary.args = {
     size: 'sm',
-    color: 'primary',
+    color: 'blue400',
     children: '버튼',
 };
 
 export const Small = Template.bind({});
 Small.args = {
     size: 'sm',
-    color: 'primary',
+    color: 'blue400',
     children: '버튼',
 };
 
 export const Medium = Template.bind({});
 Medium.args = {
     size: 'md',
-    color: 'primary',
+    color: 'blue400',
     children: '버튼',
 };
 
 export const Large = Template.bind({});
 Large.args = {
     size: 'lg',
-    color: 'primary',
+    color: 'blue400',
     children: '버튼',
 };

@@ -3,7 +3,7 @@ import { ButtonStyle } from './button.style';
 import { ButtonProps } from './button.type';
 export const Button = ({
     size = 'md',
-    color = 'primary',
+    color = 'blue400',
     clickEvent,
     hover,
     border,
