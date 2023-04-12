@@ -1,6 +1,6 @@
 import React, { PropsWithChildren, useMemo } from 'react';
 import { ThemeProvider as StyledThemeProvider } from 'styled-components';
-import { color, ThemeType } from '@dgswcns/design-token';
+import { color, ThemeType, fonts } from '@dgswcns/design-token';
 import { useCNSThemeing } from '@dgswcns/react-theming';
 
 type ThemeTypeObject = { LIGHT: 'lightThemeToken'; DARK: 'darkThemeToken' };
@@ -19,8 +19,9 @@ export const CNSThemeProvider = ({ theme, children }: CNSThemeProps) => {
     const themes: ThemeType = useMemo(() => {
         return {
             colors: color[token[useCNSThemeing(theme)]],
-            fonts: {},
+            fonts: fonts,
         };
-    }, [theme]);
+    }, [token, theme]);
+
     return <StyledThemeProvider theme={themes}>{children}</StyledThemeProvider>;
 };
