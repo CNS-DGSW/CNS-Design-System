@@ -7,7 +7,7 @@ export type CardProps = PropsWithChildren<{
     backgroundColor?: CardColorType;
     clickEvent?: React.MouseEventHandler<HTMLDivElement>;
     hover?: string | null;
-    radius?: number | 'circle';
+    radius?: boolean;
     shadow?: boolean;
     style?: CSSObject;
 }>;

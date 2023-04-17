@@ -24,12 +24,9 @@ export default {
         hover: {
             type: 'string',
         },
-        border: {
-            type: 'string',
-        },
         radius: {
-            defaultValue: 0,
-            type: 'number',
+            defaultValue: false,
+            type: 'boolean',
         },
         shadow: {
             defaultValue: false,
