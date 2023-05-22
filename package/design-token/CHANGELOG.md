@@ -1,5 +1,11 @@
 # @dgswcns/design-token
 
+## 1.0.4
+
+### Patch Changes
+
+-   publish
+
 ## 1.0.3
 
 ### Patch Changes
