@@ -1,4 +1,5 @@
-import styled, { css, FlattenSimpleInterpolation } from 'styled-components';
+import { ThemeType } from '@dgswcns/design-token';
+import styled, { css, FlattenSimpleInterpolation, ThemeProps } from 'styled-components';
 import { SizeType } from '../../../@types/size.type';
 import { InputStyleProps } from './input.type';
 
@@ -10,7 +11,7 @@ export const InputStyle = styled.input<InputStyleProps>`
     border: 1px solid #d8dae0;
     padding: 15px;
     &:disabled {
-        background: #f2f3f5;
+        background-color: ${({ theme: { colors } }: ThemeProps<ThemeType>) => colors.gray300};
     }
 `;
 

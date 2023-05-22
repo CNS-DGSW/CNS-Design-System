@@ -41,6 +41,6 @@ const getColor: Record<CardColorType, FlattenInterpolation<ThemeProps<ThemeType>
         background-color: ${({ theme: { colors } }: ThemeProps<ThemeType>) => colors.blue900};
     `,
     gray200: css`
-        background-color: ${({ theme: { colors } }: ThemeProps<ThemeType>) => colors.white};
+        background-color: ${({ theme: { colors } }: ThemeProps<ThemeType>) => colors.gray200};
     `,
 };
