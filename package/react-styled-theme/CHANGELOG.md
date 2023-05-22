@@ -1,5 +1,14 @@
 # @dgswcns/react-styled-theme
 
+## 0.1.5
+
+### Patch Changes
+
+-   publish
+-   Updated dependencies
+    -   @dgswcns/design-token@1.0.4
+    -   @dgswcns/react-theming@0.0.4
+
 ## 0.1.4
 
 ### Patch Changes

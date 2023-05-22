@@ -1,7 +1,7 @@
 {
     "name": "@dgswcns/react-styled-theme",
     "packageManager": "yarn@3.4.1",
-    "version": "0.1.4",
+    "version": "0.1.5",
     "license": "MIT",
     "sideEffects": false,
     "description": "",
@@ -30,8 +30,7 @@
         "lib"
     ],
     "publishConfig": {
-        "access": "public",
-        "@cnsdgsw:registry": "https://npm.pkg.github.com"
+        "access": "public"
     },
     "repository": {
         "type": "git",
@@ -39,8 +38,8 @@
         "url": "git+https://github.com/CNS-DGSW/CNS-Design-System.git"
     },
     "dependencies": {
-        "@dgswcns/design-token": "^1.0.3",
-        "@dgswcns/react-theming": "^0.0.3",
+        "@dgswcns/design-token": "^1.0.4",
+        "@dgswcns/react-theming": "^0.0.4",
         "react": "^18.2.0",
         "react-dom": "^18.2.0",
         "styled-components": "^5.3.8"
