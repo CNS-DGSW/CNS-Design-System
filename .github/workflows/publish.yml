@@ -1,4 +1,4 @@
-name: Publish
+name: Release
 
 on:
   push:
@@ -9,60 +9,33 @@ concurrency: ${{ github.workflow }}-${{ github.ref }}
 
 jobs:
   release:
-    name: Publish
+    name: Release
     runs-on: ubuntu-latest
     steps:
-      # 레포지토리에 체크아웃하여 소스 가져옴
       - name: ✅ Checkout Repo
         uses: actions/checkout@v2
 
-      # Node.js를 설치
       - name: ⚙️ Setting Node 16.x
         uses: actions/setup-node@v2
         with:
           node-version: "16.x"
 
-      - name: Use cached node_modules
-        uses: actions/cache@v3
-        with:
-          path: node_modules
-          key: nodeModules-${{ hashFiles('**/yarn.lock') }}
-          restore-keys: |
-            nodeModules-
-            
       - name: Install Dependencies
         run: yarn install --immutable
 
-
-      # 배포를 위해 .npmrc 파일을 생성하고 인증 토큰을 추가한다.
-      - name: Configure npm
+      - name: Creating .npmrc
         run: |
-          cat << EOF > "$HOME/.npmrc"
-            //registry.npmjs.org/:$NPM_REGISTRY_TOKEN
+          cat << EOF > "./.npmrc"
+           //registry.npmjs.org/:_authToken=$NPM_REGISTRY_TOKEN
           EOF
         env:
-          NPM_REGISTRY_TOKEN: ${{ secrets.NPM_REGISTRY_TOKEN }}
+          NPM_REGISTRY_TOKEN: ${{ secrets.NPM_TOKEN }}
 
-      # # 패키지를 빌드한다.
-      # - name: Build packages
-      #   run: yarn build
-
-      # NPM에 배포, Git 태그 생성 등의 작업을 수행한다.
-      - name: Create Release or Publish to npm
+      - name: Create Release Pull Request or Publish to npm
         uses: changesets/action@v1
         with:
-          publish: yarn ci:publish
-          version: yarn version-packages
+          publish: yarn release
+          version: yarn versioning
         env:
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
-          NPM_REGISTRY_TOKEN: ${{ secrets.NPM_REGISTRY_TOKEN }}
-
-#       # 배포에 실패한 경우 후속 처리
-#       - name: Publishing fail
-#         if: steps.changesets.outputs.published != 'true'
-#         run: ...
-# ​
-#       # 배포가 성공한 경우 후속 처리
-#       - name: Publishing success!
-#         if: steps.changesets.outputs.published == 'true'
-#         run: ... # 메일, 슬랙 메시지 전송 등... 필요 기능 추가 
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
