@@ -4,7 +4,10 @@
         "target": "ESNext",
         "module": "ESNext",
         "moduleResolution": "Node",
-        "outDir": "lib"
+        "outDir": "lib",
+
+        "noUnusedLocals": false,
+        "noUnusedParameters": false
     },
     "exclude": ["lib"]
 }
