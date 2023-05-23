@@ -23,6 +23,7 @@
         "clean": "ultra -r clean",
         "dev": "ultra -r dev",
         "ci:publish": "ultra -r ci:publish",
-        "version-packages": "yarn changeset version"
+        "version-packages": "yarn changeset version",
+        "release": "ultra -r build && yarn changeset publish"
     }
 }
