@@ -22,7 +22,8 @@
         "build": "nanobundle build",
         "preview": "vite preview",
         "storybook": "start-storybook -p 6006",
-        "build-storybook": "build-storybook"
+        "build-storybook": "build-storybook",
+        "deploy": "storybook-to-ghpages"
     },
     "dependencies": {
         "nanobundle": "^1.6.0",
@@ -50,6 +51,7 @@
         "@storybook/client-api": "^6.5.16",
         "@storybook/preview-web": "^6.5.16",
         "@storybook/react": "^6.5.16",
+        "@storybook/storybook-deployer": "^2.8.16",
         "@storybook/testing-library": "^0.0.13",
         "@types/react": "^18.0.28",
         "@types/react-dom": "^18.0.11",
