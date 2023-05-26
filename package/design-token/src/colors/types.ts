@@ -2,7 +2,7 @@ type ColorNumber = '100' | '200' | '300' | '400' | '500' | '600' | '700' | '800'
 type ColorType = 'blue' | 'gray';
 
 export type ColorKinds = `${ColorType}${ColorNumber}` | 'white' | 'black';
-export type ColorKindsType = Record<ColorKinds, string>;
+export type ColorsThemeType = Record<ColorKinds, string>;
 
 // 원하는 컬러 개수별 타입 자동 생성 로직 Ex) IteratorColorList 에 blue 3 입력시 blue100 | blue200 | blue300 타입 생성
 

@@ -1,6 +1,6 @@
-import { ColorKindsType } from './types';
+import { ColorsThemeType } from './types';
 
-export const lightThemeToken: ColorKindsType = Object.freeze({
+export const lightThemeToken: ColorsThemeType = Object.freeze({
     white: '#ffffff',
 
     black: '#000000',
@@ -26,7 +26,7 @@ export const lightThemeToken: ColorKindsType = Object.freeze({
     gray900: '#212121',
 });
 
-export const darkThemeToken: ColorKindsType = Object.freeze({
+export const darkThemeToken: ColorsThemeType = Object.freeze({
     white: '#fffff',
 
     black: '#000000',
