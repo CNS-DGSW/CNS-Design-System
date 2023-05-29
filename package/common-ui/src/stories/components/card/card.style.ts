@@ -32,15 +32,15 @@ const getSize: Record<CardSizeType, FlattenSimpleInterpolation> = {
 
 const getColor: Record<CardColorType, FlattenInterpolation<ThemeProps<ThemeType>>> = {
     blue300: css`
-        background-color: ${({ theme: { colors } }: ThemeProps<ThemeType>) => colors.blue300};
+        background-color: ${({ theme: { colors } }) => colors.blue200};
     `,
     blue400: css`
-        background-color: ${({ theme: { colors } }: ThemeProps<ThemeType>) => colors.blue400};
+        background-color: ${({ theme: { colors } }) => colors.blue400};
     `,
     blue900: css`
-        background-color: ${({ theme: { colors } }: ThemeProps<ThemeType>) => colors.blue900};
+        background-color: ${({ theme: { colors } }) => colors.blue900};
     `,
     gray200: css`
-        background-color: ${({ theme: { colors } }: ThemeProps<ThemeType>) => colors.white};
+        background-color: ${({ theme: { colors } }) => colors.white};
     `,
 };

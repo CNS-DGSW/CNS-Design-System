@@ -19,7 +19,7 @@ export const CNSThemeProvider = ({ theme, children }: CNSThemeProps) => {
     const themes: ThemeType = useMemo(() => {
         return {
             colors: color[token[useCNSThemeing(theme)]],
-            fonts: fonts,
+            fonts: fonts.fontToken,
         };
     }, [token, theme]);
 
