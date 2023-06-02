@@ -26,6 +26,8 @@
         "deploy": "storybook-to-ghpages"
     },
     "dependencies": {
+        "@dgswcns/design-token": "1.0.4",
+        "@dgswcns/react-styled-theme": "^0.1.5",
         "nanobundle": "^1.6.0",
         "react": "^18.2.0",
         "react-dom": "^18.2.0",
@@ -33,8 +35,6 @@
     },
     "devDependencies": {
         "@babel/core": "^7.21.3",
-        "@dgswcns/design-token": "1.0.4",
-        "@dgswcns/react-styled-theme": "^0.1.5",
         "@mdx-js/react": "^1.6.22",
         "@storybook/addon-actions": "^6.5.16",
         "@storybook/addon-backgrounds": "^6.5.16",
