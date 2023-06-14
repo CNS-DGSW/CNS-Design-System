@@ -1,5 +1,24 @@
 # @dgswcns/design-token
 
+## 1.0.7
+
+### Patch Changes
+
+-   support theme type
+
+## 1.0.6
+
+### Patch Changes
+
+-   supprot theme type
+
+## 1.0.5
+
+### Patch Changes
+
+-   test
+-   test
+
 ## 1.0.4
 
 ### Patch Changes

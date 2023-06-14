@@ -2,7 +2,7 @@ import styled, {
     css,
     FlattenInterpolation,
     FlattenSimpleInterpolation,
-    ThemeProps,
+    ThemeProps
 } from 'styled-components';
 import { SizeType } from '../../../@types/size.type';
 import { ButtonColorType, ButtonProps } from './button.type';

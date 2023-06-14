@@ -1,6 +1,6 @@
 {
     "name": "@dgswcns/design-token",
-    "version": "1.0.4",
+    "version": "1.0.7",
     "packageManager": "yarn@3.4.1",
     "license": "MIT",
     "sideEffects": false,

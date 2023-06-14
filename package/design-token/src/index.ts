@@ -16,4 +16,12 @@ export type ThemeType = {
     fonts: FontThemeType
 };
 
+declare module 'styled-components' {
+    export interface DefaultTheme {
+        colors: ColorsThemeType;
+        fonts: FontThemeType
+    }
+}
+
+
 export * from './fonts/types';

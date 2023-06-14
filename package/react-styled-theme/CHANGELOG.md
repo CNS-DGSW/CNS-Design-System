@@ -1,5 +1,24 @@
 # @dgswcns/react-styled-theme
 
+## 0.1.7
+
+### Patch Changes
+
+-   supprot theme type
+-   Updated dependencies
+    -   @dgswcns/design-token@1.0.6
+
+## 0.1.6
+
+### Patch Changes
+
+-   test
+-   test
+-   Updated dependencies
+-   Updated dependencies
+    -   @dgswcns/design-token@1.0.5
+    -   @dgswcns/react-theming@0.0.5
+
 ## 0.1.5
 
 ### Patch Changes
