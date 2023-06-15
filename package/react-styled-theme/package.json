@@ -1,7 +1,7 @@
 {
     "name": "@dgswcns/react-styled-theme",
     "packageManager": "yarn@3.4.1",
-    "version": "0.1.5",
+    "version": "0.1.7",
     "license": "MIT",
     "sideEffects": false,
     "description": "",
@@ -38,8 +38,8 @@
         "url": "git+https://github.com/CNS-DGSW/CNS-Design-System.git"
     },
     "dependencies": {
-        "@dgswcns/design-token": "^1.0.4",
-        "@dgswcns/react-theming": "^0.0.4",
+        "@dgswcns/design-token": "^1.0.6",
+        "@dgswcns/react-theming": "^0.0.5",
         "react": "^18.2.0",
         "react-dom": "^18.2.0",
         "styled-components": "^5.3.8"
